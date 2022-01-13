@@ -64,7 +64,8 @@ app.use("/contest",contestController);
 app.use("/students",studentController);
 app.use("/admin",adminController);
 
-app.listen(process.env.PORT||2020,async ()=>{
+var port =process.env.PORT||2020;
+app.listen(port,async ()=>{
   let data= await  connect();
     console.log("listening on port 2020")
 })
