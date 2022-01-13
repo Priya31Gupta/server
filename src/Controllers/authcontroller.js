@@ -3,7 +3,7 @@ require("dotenv").config();
 const admin = require("../models/admin.model");
 
 const newToken = (user)=>{
-    return jwt.sign({user},process.env.JWT_SECRET_KEY)
+    return jwt.sign({user},'masaischool')
 }
 
 const signup =async (req,res)=>{
